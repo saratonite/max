@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Public Area
+
+Route::get('home',["uses"=>"HomeController@index","as"=>"home"]);
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
