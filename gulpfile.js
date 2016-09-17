@@ -14,3 +14,13 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('app.scss');
 });
+
+// Scripts
+
+elixir(function(mix){
+  mix.scripts(['../../../node_modules/material-design-lite/material.js'],'public/js/vendor.js');
+});
+
+elixir(function(mix){
+  mix.babel(['app.js'],'public/js/app.js');
+});
