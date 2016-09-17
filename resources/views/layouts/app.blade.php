@@ -60,9 +60,13 @@
        </nav>
     </div>
     <main class="mdl-layout__content">
-       <div class="page-content">
-           @yield('content')
-       </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col" >
+          <div class="page-content">
+              @yield('content')
+          </div>
+        </div>
+     </div>
     </main>
  </div>
 
