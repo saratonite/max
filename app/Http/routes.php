@@ -27,4 +27,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware'=>['auth']],function(){
   Route::get('/contacts',['uses'=>'ContactController@getIndex']);
+
+
+  //Mail Routes
+  Route::get('/mail/compose',['uses'=>'MailController@getCompose']);
+  Route::post('/mail/post',['uses'=>'MailController@postMail']);
 });
