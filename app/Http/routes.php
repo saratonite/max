@@ -22,3 +22,9 @@ Route::get('home',["uses"=>"HomeController@index","as"=>"home"]);
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+// User area
+
+Route::group(['middleware'=>['auth']],function(){
+  Route::get('/contacts',['uses'=>'ContactController@getIndex']);
+});
