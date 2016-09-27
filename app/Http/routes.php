@@ -25,8 +25,8 @@ Route::get('/home', 'HomeController@index');
 
 // User area
 
-Route::group(['middleware'=>['auth']],function(){
-  Route::get('/contacts',['uses'=>'ContactController@getIndex']);
+Route::group(['middleware'=>['auth'],'name'=>'me::'],function(){
+  Route::get('/contacts',['uses'=>'ContactController@getIndex','as'=>'contacts']);
 
 
   //Mail Routes

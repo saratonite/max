@@ -8,7 +8,7 @@
   <!-- Loop through contacts -->
   <div class="mdl-grid">
 
-    @foreach($contacts as $contact)
+    @forelse($contacts as $contact)
 
     <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -26,7 +26,13 @@
       </div>
     </div>
 
-    @endforeach
+  @empty
+
+    <p>
+      No Contacts
+    </p>
+
+  @endforelse
 
   </div>
 

@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Max</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 
 
     <!-- Styles -->
@@ -14,7 +17,7 @@
 
     <style>
         body {
-            font-family: 'Lato';
+            font-family: 'Lato', sans-serif;
         }
 
         .fa-btn {
@@ -39,6 +42,7 @@
              <a class="mdl-navigation__link" href="{{url('/login')}}">Login</a>
              <a class="mdl-navigation__link" href="{{url('/register')}}">Register</a>
              @else
+             <a class="mdl-navigation__link" href="{{ route('contacts') }}">Contacts</a>
              <a class="mdl-navigation__link" href="{{url('/logout')}}">Logout</a>
              @endif
           </nav>
@@ -52,6 +56,7 @@
           <a class="mdl-navigation__link" href="{{url('/login')}}">Login</a>
           <a class="mdl-navigation__link" href="{{url('/register')}}">Register</a>
           @else
+          <a class="mdl-navigation__link" href="{{ route('contacts') }}">Contacts</a>
           <a class="mdl-navigation__link" href="{{url('/logout')}}">Logout</a>
           @endif
        </nav>
