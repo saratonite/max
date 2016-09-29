@@ -6,11 +6,9 @@
 
   <h3>Contacts</h3>
   <!-- Loop through contacts -->
-  <div class="mdl-grid">
-
+  <div class="row">
     @forelse($contacts as $contact)
-
-    <div class="mdl-cell mdl-cell--4-col">
+      <div class="col-md-3">
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand">
           <h2 class="mdl-card__title-text">{{$contact->first_name}} {{$contact->last_name}}</h2>
@@ -26,6 +24,7 @@
       </div>
     </div>
 
+
   @empty
 
     <p>
@@ -33,6 +32,7 @@
     </p>
 
   @endforelse
+
 
   </div>
 
