@@ -23,4 +23,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /* Relationships */
+
+    // Contact model
+    public function contacts(){
+      return $this->hasMany('App\Contact','user_id');
+    }
+
+
 }

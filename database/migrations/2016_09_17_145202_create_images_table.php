@@ -15,6 +15,7 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
+            $table->integer('contact_id');
             $table->string('path',255);
             $table->string('real_filename',255);
             $table->string('title',255)->nullable();
@@ -22,6 +23,7 @@ class CreateImagesTable extends Migration
             $table->string('content_type',100);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('contact_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
