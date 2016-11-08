@@ -29,8 +29,8 @@ Route::group(['middleware'=>['auth'],'name'=>'me::'],function(){
   //Contacts
   Route::get('/contacts',['uses'=>'ContactController@getIndex','as'=>'contacts']);
 
-  Route::get('/contacts/new',['uses'=>'ContactController@getNew','as'=>'new-contact']);
-  Route::post('/contacts/new',['uses'=>'ContactController@postNew']);
+  Route::get('/contacts/create',['uses'=>'ContactController@getCreate','as'=>'new-contact']);
+  Route::post('/contacts/create',['uses'=>'ContactController@postCreate']);
 
 
   //Mail Routes

@@ -2,28 +2,45 @@
 
 @section('content')
 
-  <h1>New Contact</h1>
+<div class="row">
+  <div class="col-md-6">
+    
 
-  <form class="" action="{{route('new-contact')}}" method="post">
+    <div class="panel panel-default">
+
+<div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+
+    <form class="" action="{{route('new-contact')}}" method="post">
     {{csrf_field()}}
-    <div class="">
+    <div class="form-group">
       <label for="">First Name</label>
-        <input type="text" name="first_name" value="{{old('first_name')}}">
+        <input class="form-control" type="text" name="first_name" value="{{old('first_name')}}">
 
     </div>
-    <div class="">
+    <div class="form-group">
       <label for="">Last Name</label>
-        <input type="text" name="last_name" value="{{old('last_name')}}">
+        <input class="form-control" type="text" name="last_name" value="{{old('last_name')}}">
 
     </div>
-    <div class="">
+    <div class="form-group">
       <label for="">Description</label>
-        <textarea type="text" name="description" >{{old('description')}}</textarea>
+        <textarea class="form-control" type="text" name="description" >{{old('description')}}</textarea>
 
     </div>
-    <div class="">
-      <button type="submit" >Submit</button>
+    <div class="form-group">
+      <button class="btn btn-success " type="submit" >Create</button>
     </div>
   </form>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+
+
 
 @endsection

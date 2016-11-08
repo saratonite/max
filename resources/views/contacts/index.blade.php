@@ -8,21 +8,27 @@
   <!-- Loop through contacts -->
   <div class="row">
     @forelse($contacts as $contact)
-      <div class="col-md-3">
-      <div class="demo-card-square mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">{{$contact->first_name}} {{$contact->last_name}}</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          {{$contact->description}}
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            View
-          </a>
+    <div class="col-md-4">
+      <div class="panel panel-default ">
+        <div class="panel-heading">{{$contact->first_name}} {{$contact->last_name}}</div>
+        <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img style="width:64px;" class="media-object" src="{{url('images/candle.png')}}" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                {{$contact->description}}
+              </div>
+            </div>
+          
         </div>
       </div>
+      
     </div>
+    
 
 
   @empty

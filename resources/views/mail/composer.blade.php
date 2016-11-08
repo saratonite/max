@@ -1,29 +1,31 @@
 @extends('layouts.app')
 @section('content')
-<div class="mdl-grid">
+<div class="row">
 
-  <div class="mdl-cell mdl-cell--12-col">
+  <div class="col-md-5">
     <form class="" action="{{url('mail/post')}}" method="post">
 
       {{csrf_field()}}
 
-      <div class="mdl-textfield mdl-js-textfield">
-       <input class="mdl-textfield__input" type="text" name="to" id="ff_to">
+      <div class="form-group">
+       
        <label class="mdl-textfield__label" for="ff_to">To</label>
+       <input class="form-control" type="text" name="to" id="ff_to">
      </div>
 
-      <div class="mdl-textfield mdl-js-textfield">
-       <input class="mdl-textfield__input" type="text" name="subject" id="ff_subject">
+      <div class="form-group">
+      
        <label class="mdl-textfield__label" for="ff_subject">Subject</label>
-     </div>
+        <input class="form-control" type="text" name="subject" id="ff_subject">
 
 
-     <div class="mdl-textfield mdl-js-textfield">
-        <textarea class="mdl-textfield__input" cols="10" type="text" name="message" rows="1" id="ff_message"></textarea>
+     <div class="form-group">
+       
         <label class="mdl-textfield__label" for="ff_message">Message</label>
+          <textarea class="form-control" cols="10" type="text" name="message" rows="1" id="ff_message"></textarea>
       </div>
 
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+      <button class="btn btn-success">
         Send
       </button>
 

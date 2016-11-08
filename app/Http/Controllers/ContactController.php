@@ -22,14 +22,14 @@ class ContactController extends Controller
 
   // New Contact View
 
-  public function getNew(){
+  public function getCreate(){
 
     return view('contacts.new');
   }
 
   // New Contact Store
 
-  public function postNew(StoreContactRequest $request){
+  public function postCreate(StoreContactRequest $request){
 
 
     // Save Contact
