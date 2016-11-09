@@ -10,7 +10,7 @@
     @forelse($contacts as $contact)
     <div class="col-md-4">
       <div class="panel panel-default ">
-        <div class="panel-heading">{{$contact->first_name}} {{$contact->last_name}}</div>
+        <div class="panel-heading">{{str_limit($contact->first_name.$contact->last_name,40)}}</div>
         <div class="panel-body">
             <div class="media">
               <div class="media-left">
@@ -42,7 +42,7 @@
 
   </div>
 
-
+  {{ $contacts->links() }}
   <!-- End Contact loop -->
 </div>
 @endsection

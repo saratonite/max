@@ -13,7 +13,7 @@ class ContactController extends Controller
 
   public function getIndex(){
 
-    $contacts = Contact::all();
+    $contacts = Contact::paginate(12);
 
     return view('contacts.index',compact('contacts'));
 
